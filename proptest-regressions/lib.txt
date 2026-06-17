@@ -1,0 +1,9 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 18789e37c28b93a2da1fa1e2c438a115813e6f683124eec881ee22fdef82ab12 # shrinks to tz = "+30:00", dt = "2000-02-29T00:00:00Z"
+cc fde3727b608f54bcd540b472389c2f81aa38b6eed136cd9970d25b5863183eeb # shrinks to tz = "Z", dt = "2000-02-29T00:00:00-00:00"
+cc e4e6e9c3d6b90a1a4ac95bc69441b8648000090a7e6587583ca1b8f94fe0ebc6 # shrinks to oc = 3122714, os = 5, dt = "1920-02-01T00:00:00+00:00"

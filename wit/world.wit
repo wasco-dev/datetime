@@ -1,0 +1,30 @@
+package wasco-dev:datetime@0.1.0;
+
+interface datetime {
+    /// The RFC3339 string format is used for timestamps
+    type timestamp = string;
+
+    enum offset-size {
+        seconds,
+        minutes,
+        hours,
+        days,
+        weeks,
+        months,
+        years,
+    }
+
+    /// This gets the timestamp for the current moment in UTC.
+    now: func() -> timestamp;
+    
+    /// The timezone is in any valid [ISO time zone designator format](https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators)
+    change-timezone: func(timestamp: timestamp, timezone: string) -> result<timestamp, string>;
+
+    offset-datetime: func(timestamp: timestamp, offset-count: s32, offset-size: offset-size) -> result<timestamp, string>;
+    offset-datetime-in-business-days: func(timestamp: timestamp, offset-count: s32, offset-size: offset-size) -> result<timestamp, string>;
+}
+
+world main {
+    export datetime;
+}
+    
