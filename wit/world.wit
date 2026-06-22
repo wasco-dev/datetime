@@ -1,4 +1,4 @@
-package wasco-dev:datetime@0.1.0;
+package wasco-dev:datetime@0.1.1;
 
 interface datetime {
     /// The RFC3339 string format is used for timestamps
